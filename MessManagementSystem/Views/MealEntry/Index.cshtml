@@ -1,0 +1,91 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@*<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Content/datatables.css" rel="stylesheet" />
+    <script src="~/Content/datatables.js"></script>
+    <script src="~/Scripts/lib/AjaxManager.js"></script>
+    <script src="~/Scripts/lib/Messages.js"></script>
+    <link href="~/Content/notifIt.css" rel="stylesheet" />
+    <script src="~/Scripts/lib/notifit.js"></script>*@
+<h2>Meal</h2>
+
+<div class="row" style="margin-top:30px">
+    <div class="col-md-12">
+
+        <form id="mealEntryForm">
+
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Name</label>
+                    <div class="col-md-5">
+                        <select class="form-control" id="nameDDL" name="MemberId"></select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Breakfast</label>
+                    <div class="col-md-5">
+                        <input class="form-control" id="breakfastText" type="text" name="Breakfast" value="" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Lunch</label>
+                    <div class="col-md-5">
+                        <input class="form-control" id="lunchText" type="text" name="Lunch" value="" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Dinner</label>
+                    <div class="col-md-5">
+                        <input class="form-control" id="dinnerText" type="text" name="Dinner" value="" />
+                    </div>
+                </div>
+
+                @*<div class="form-group">
+                        <label class="col-md-4 control-label">TotalMeal</label>
+                        <div class="col-md-8">
+                            <input class="form-control" id="totalMealText" type="text" name="TotalMeal" value="" />
+                        </div>
+                    </div>*@
+
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Date</label>
+                    <div class="col-md-5">
+                        <input class="form-control" id="date" type="date" name="Date" value="" />
+                    </div>
+                </div>        
+
+                <div class="form-group">
+                    <div class="col-md-offset-4 col-md-5">
+
+                        <button style="margin-right: 5px; width: 70px" id="saveButton" type="button" class="btn btn-success">Save</button>
+                        <input style="width: 70px" id="clearButton" type="reset" value="Clear" class="btn btn-primary" />
+                    </div>
+                    @*</div>*@
+                </div>
+            </div>
+        </form>
+
+
+    </div>
+    <div class="col-md-12 well table table-responsive">
+
+        <div style="padding-top: 30px"> 
+            <table class="table table-bordered table-striped table-condensed" id="tableElement" style="width: 100%"></table>
+        </div>
+    </div>
+</div>
+@*<script src="~/Scripts/Custom/MealEntry.js"></script>*@
+@section Scripts{
+    <script src="//cdn.datatables.net/plug-ins/1.10.21/api/sum().js"></script>
+    <script src="~/Scripts/Custom/MealEntry.js"></script>
+
+}
+
+
